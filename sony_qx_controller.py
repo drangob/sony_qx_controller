@@ -13,8 +13,8 @@ import http.client, urllib.parse
 import threading
 import base64, hashlib
 
-from PyQt4.QtCore import *
-from PyQt4.QtGui import *
+from PyQt6.QtWidgets import QApplication, QWidget, QLabel
+from PyQt6.QtGui import QImage, QPixmap
 
 lock = threading.Lock()
 
@@ -221,4 +221,4 @@ if __name__ == "__main__":
     communication = threading.Thread(target = communicationThread)
     communication.start()
 
-    sys.exit(app.exec_())
+    sys.exit(app.exec())
